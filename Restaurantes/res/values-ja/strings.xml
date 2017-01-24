@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Restaurantes</string>
+    <string name="hello_world">こんにちは世界</string> <!--Konnichiwa Sekai!-->
+    <string name="action_settings">Settings</string>
+    <string name="nombreRestauranteLbL">名前: </string> <!--Namae-->
+    <string name="direccionRestauranteLbL">住所: </string> <!--Jūsho-->
+    <string name="tipoRestauranteLbL">種類: </string> <!--Shurui-->
+    <string name="tipo1">メキシカーナ </string> <!--Mekishikāna-->
+    <string name="tipo2">中国 </string> <!--Chūgoku-->
+    <string name="tipo3">イタリア語 </string> <!--Itaria-go-->
+ 	<string name="guardar">保存</string> <!--Hozon-->
+ 	
+</resources>

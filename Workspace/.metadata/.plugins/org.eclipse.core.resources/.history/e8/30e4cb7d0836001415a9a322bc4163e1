@@ -1,0 +1,7 @@
+package com.example.miniagenda;
+
+public class ClsDatos {
+	private String titulo;
+	
+
+}

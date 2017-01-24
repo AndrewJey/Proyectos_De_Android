@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Restaurantes</string>
+    <string name="hello_world">Hello World!</string>
+    <string name="action_settings">Settings</string>
+    <string name="nombreRestauranteLbL">Nombre: </string>
+    <string name="direccionRestauranteLbL">Dirección: </string>
+    <string name="tipoRestauranteLbL">Tipo: </string>
+    <string name="tipo1">Mexicana </string>
+    <string name="tipo2">China </string>
+    <string name="tipo3">Italiana </string>
+    <string name="guardar">Salvar</string>
+    
+</resources>

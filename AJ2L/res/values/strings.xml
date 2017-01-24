@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <string name="app_name">AJ2L</string>
+    <string name="hello_world">¡Hola Mundo!</string>
+    <string android:id="@+id/string1" name="textmessage" android:layout_width="wrap_content" android:layout_height="wrap_content">Write Here!</string>
+    <string name="action_settings">Settings</string>
+    <string android:id="@+id/string1" name="goMessage" android:layout_width="wrap_content" android:layout_height="wrap_content">Go!</string>
+    <string name="title_activity_second">SecondActivity</string>
+
+</resources>

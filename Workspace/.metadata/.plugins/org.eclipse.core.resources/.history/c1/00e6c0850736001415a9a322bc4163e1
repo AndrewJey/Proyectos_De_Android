@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.miniagenda.InsertarActivity" >
+
+    <TableLayout
+        android:id="@+id/MiniAgendaInsertar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:shrinkColumns="1"
+        android:stretchColumns="1" >
+
+        <TableRow>
+
+            <TextView android:text="@string/titulolbl" />
+
+            <EditText android:id="@+id/tituloTxt" />
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="@string/horalbl" />
+            <EditText android:id="@+id/horaTxt" />
+        </TableRow>
+        <TableRow>
+            <TextView android:text="@string/lugarlbl" />
+            <EditText android:id="@+id/lugarTxt" />
+        </TableRow>
+        <TableRow>
+            <TextView android:text="@string/descripcionlbl" />
+            <EditText android:id="@+id/descripcionTxt" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="guardarOnClick"
+                android:text="@string/guardar" />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

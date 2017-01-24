@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.sqlexample.MainActivity" >
+
+    
+
+    <EditText
+        android:id="@+id/idAnimalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:ems="10" 
+        android:hint="Id Animal"/>
+    
+
+    <EditText
+        android:id="@+id/nombreAnimalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/idAnimalText"
+        android:layout_below="@+id/idAnimalText"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Nombre Animal" />
+    
+    <EditText
+        android:id="@+id/colorAnimalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nombreAnimalText"
+        android:layout_below="@+id/nombreAnimalText"
+        android:layout_marginTop="30dp"
+        android:ems="10" 
+        android:hint="Color Animal"/>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/colorAnimalText"
+        android:layout_below="@+id/colorAnimalText"
+        android:layout_marginTop="35dp"
+        android:text="Agregar" 
+    	android:onClick="agregarBtn" />
+
+    <Button
+        android:id="@+id/Button01"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Eliminar" 
+	    android:onClick="eliminarBtn" />
+
+    <Button
+        android:id="@+id/Button02"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignRight="@+id/colorAnimalText"
+        android:text="Buscar"
+        android:onClick="buscarBtn" />
+
+</RelativeLayout>

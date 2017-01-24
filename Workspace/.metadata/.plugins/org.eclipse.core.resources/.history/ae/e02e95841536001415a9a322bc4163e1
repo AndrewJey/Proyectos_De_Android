@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MiniAgenda</string>
+    <string name="insertar">Insertar Tarea</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="title_activity_detalle">DetalleActivity</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <string name="title_activity_insertar">InsertarActivity</string>    
+    <string name="guardar">Guardar</string>
+    <string name="titulolbl">Titulo</string>
+    <string name="horalbl">Hora</string>
+    <string name="lugarlbl">Lugar</string>
+    <string name="descripcionlbl">Descripcion</string>
+
+</resources>
