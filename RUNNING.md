@@ -28,3 +28,11 @@ Inventario y compilaciones locales del 2026-11-15. Una compilación correcta no 
 
 `.gitignore` excluye credenciales locales, estado del editor y salidas de las herramientas detectadas. No deja de versionar archivos que ya estaban en Git. Los manifiestos, archivos de bloqueo, recursos fuente y scripts de esquema forman parte del código.
 <!-- local-development:end -->
+
+
+<!-- improvements-20261119:start -->
+## Mejoras y verificación — 2026-11-19 (Corrección de ciclo infinito y NPE en estructura de datos Lista (Java))
+
+- **Cambios:** Corregido en `appLista/src/logica/Lista.java` el auto-ciclo `nuevo.siguiente = nuevo` en `agregar`/`agregarFinal`, la guarda de índices negativos en `bucarIndice` (más alias `buscarIndice`) y el bucle fijo `i < 10` en `borrarXindice` que causaba `NullPointerException` al ejecutar `AppLista.main`.
+- **Validación:** Compilación JDK 17 + ejecución real de `applista.AppLista` + 9/9 aserciones unitarias en `TestLista`.
+<!-- improvements-20261119:end -->

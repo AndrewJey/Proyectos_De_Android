@@ -21,13 +21,12 @@ public class Lista {
         boolean retorno = true;
         this.error = "";
         try {
+            Nodo nuevo = new Nodo(pDato);
             if (this.vacio()) {
-                Nodo nuevo = new Nodo(pDato);
                 this.primero = nuevo;
                 this.ultimo = nuevo;
-                nuevo.siguiente = nuevo;
+                nuevo.siguiente = null;
             } else {
-                Nodo nuevo = new Nodo(pDato);
                 nuevo.siguiente = this.primero;
                 this.primero = nuevo;
             }
@@ -112,20 +111,19 @@ public class Lista {
         return retorno;
     }
     
-   public boolean agregarFinal(Object pDato){
-       boolean retorno = true;
+    public boolean agregarFinal(Object pDato) {
+        boolean retorno = true;
         this.error = "";
         try {
+            Nodo nuevo = new Nodo(pDato);
             if (this.vacio()) {
-                Nodo nuevo = new Nodo(pDato);
                 this.primero = nuevo;
                 this.ultimo = nuevo;
-                nuevo.siguiente = nuevo;
+                nuevo.siguiente = null;
             } else {
-                Nodo nuevo = new Nodo(pDato);
-                this.ultimo.siguiente=nuevo;
-                this.ultimo=this.ultimo.siguiente;
-                this.ultimo.siguiente=null;
+                this.ultimo.siguiente = nuevo;
+                this.ultimo = nuevo;
+                this.ultimo.siguiente = null;
             }
             this.tamanno++;
         } catch (Exception e) {
@@ -133,44 +131,43 @@ public class Lista {
             retorno = false;
         }
         return retorno;
-   }
-   public Object bucarIndice(int indice){
-       Object retorno=null;
-       
-        if (indice<this.tamanno) {
-            int i;
-            Nodo temp=this.primero;
-            for (i = 0; i <indice ; i++) { 
-                temp=temp.siguiente;
-            }
-           retorno=temp.dato; 
-       }      
-       return retorno;
-   }
-   
-   public boolean borrarXindice(int indice){
-       boolean retorno=true;
-       if (!this.vacio()) {
-           if ((indice>=0)&&indice<=this.tamanno-1) {
-               if (indice==0) {
-                   retorno=this.borrarPrimero();
-               }
-               else if (indice==this.tamanno-1) {
-                   retorno=this.borrar();
-               }
-               else{
-                   Nodo ant=this.primero;
-                   Nodo aux=ant.siguiente;
-                   for (int i = 0; i < 10; i++) {
-                       ant=ant.siguiente;
-                       aux=aux.siguiente;
-                   }
-                   ant.siguiente=aux.siguiente;
-                   this.tamanno--;
-                   retorno=true;
-               }
-           }
-       } 
-       return retorno;
-   }
+    }
+
+    public Object buscarIndice(int indice) {
+        return bucarIndice(indice);
+    }
+
+    public Object bucarIndice(int indice) {
+        if (indice < 0 || indice >= this.tamanno || this.vacio()) {
+            return null;
+        }
+        Nodo temp = this.primero;
+        for (int i = 0; i < indice; i++) {
+            if (temp == null) return null;
+            temp = temp.siguiente;
+        }
+        return temp != null ? temp.dato : null;
+    }
+
+    public boolean borrarXindice(int indice) {
+        this.error = "";
+        if (this.vacio() || indice < 0 || indice >= this.tamanno) {
+            this.error = "Indice fuera de rango";
+            return false;
+        }
+        if (indice == 0) {
+            return this.borrarPrimero();
+        }
+        if (indice == this.tamanno - 1) {
+            return this.borrar();
+        }
+        Nodo ant = this.primero;
+        for (int i = 0; i < indice - 1; i++) {
+            ant = ant.siguiente;
+        }
+        Nodo aux = ant.siguiente;
+        ant.siguiente = aux.siguiente;
+        this.tamanno--;
+        return true;
+    }
 }
